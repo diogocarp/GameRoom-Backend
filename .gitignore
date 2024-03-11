@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+pass.ts
+config/pass.ts
+src/config/pass.ts
