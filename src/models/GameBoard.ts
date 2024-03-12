@@ -22,13 +22,13 @@ const GameBoardSchema: Schema = new Schema({
     name: { type: String, required: true },
     value: { type: Number, required: true },
     description: { type: String, required: true },
-    minPlayers: { type: Number, required: true },
-    maxPlayers: { type: Number, required: true },
-    recommendedAge: { type: Number, required: true },
-    publisher: { type: String, required: true },
-    designer: { type: String, required: true },
-    releaseDate: { type: Date, required: true },
-    imageURL: { type: String },
+    minPlayers: { type: Number, },
+    maxPlayers: { type: Number, },
+    recommendedAge: { type: Number, },
+    publisher: { type: String, },
+    designer: { type: String, },
+    releaseDate: { type: Date, },
+    imageURL: { type: String, required: true},
     rulesURL: { type: String }
 });
 

@@ -17,7 +17,7 @@ const UserSchema = new Schema<User>({
   name: { type: String, required: true },
   cpf: { type: String, required: true },
   birth: { type: Date, required: true },
-  address: { type: String, required: true },
+  address: { type: String, },
   email: { type: String, required: true },
   password: { type: String, required: true },
   type: {type: String, required: true}
