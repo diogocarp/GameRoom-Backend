@@ -1,20 +1,26 @@
 
 import express, { Request, Response } from 'express';
-import User from '../models/User';
 import mongoose from 'mongoose';
+import User from '../models/User';
+
 
 const router = express.Router();
 
 router.post('/', async (req: Request, res: Response) => {
+
   try {
+
     const count = await mongoose.model('User').countDocuments();
     const id = count + 1;
     const { name, cpf, birth, address, email, password, type } = req.body;  
     const user = new User({ id, name, cpf, birth, address, email, password, type });
     await user.save();
     res.status(201).json(user);
+
   } catch (error:any) {
+
     res.status(400).json({ message: error.message });
+
   }
 });
 
